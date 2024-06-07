@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" data-bs-theme="dark" >
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -11,7 +12,156 @@
   
 </head>
 
-<style>
+
+                       <!--Horizontal upper Navbar start -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <div class="container-fluid position-relative">    
+        <a class="navbar-brand text-success" href="https://suman-ojbp.onrender.com/students">
+            <img src="studentlogo.jpg" alt="Logo" style="width:40px;" class="rounded-pill">
+        </a>
+        <button class="btn btn-success d-flex justify-content-center align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <span class="navbar-toggler-icon fw-bold fs-5"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ">
+        <li class="nav-item ">
+          <a class="nav-link  fw-bold fs-6" href="https://www.w3schools.com/bootstrap5/">Bootstrap 5</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold fs-6" href="https://www.w3schools.com/js/default.asp">JavaScript</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link fw-bold fs-6" href="https://www.w3schools.com/java/default.asp">java</a>
+        </li>  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold fs-6" href="#" role="button" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu bg-secondary">
+            <li><a class="dropdown-item fw-bold fs-6" href="https://www.w3schools.com/jquery/default.asp">JQuery</a></li>
+            <li><a class="dropdown-item fw-bold fs-6" href="https://scholarship.odisha.gov.in/website/home">Apply Scholarship</a></li>
+            <li><a class="dropdown-item fw-bold fs-6" href="https://spdp.apps.prod.osdc.gov.in/#/spdpwebsite/nabinMagicCard/enrollNbnCard">Apply Magic Card</a></li>
+          </ul>
+        </li>
+      </ul>   
+      </div>   
+      </div>        
+    <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-primary badge rounded-pill" type="button">Registration</button>
+            <button class="btn btn-danger badge rounded-pill" type="button">Login</button>
+                    <form class="d-flex">
+            
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="button" id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- This div holds the text -->
+        <div class="position-absolute text-white">
+            <h5 class="navbar-text animated-text text-warning" style="max-height: 40px; overflow: hidden;">
+                Higher Education: Odisha is home to several reputed universities and colleges offering a wide range of undergraduate, postgraduate, and doctoral programs. Institutions like Utkal University, Sambalpur University, and Ravenshaw University are prominent in the state's higher education landscape.
+            </h5>
+        </div>
+    </div>
+</nav>
+
+<br><br>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">.
+        <a class="navbar-brand" href="#"></a>
+    </div>
+    
+</nav>
+
+<!--  <br><br> -->
+<!--   
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">- </a>
+  </div>
+  <h5 class="navbar-text animated-text bg-black  text-white">
+              Higher Education: Odisha is home to several reputed universities and 
+              colleges offering a wide range of undergraduate, postgraduate, and doctoral programs. 
+              Institutions like Utkal University, Sambalpur University, and Ravenshaw University are 
+              prominent in the state's higher education landscape.
+              </h5>                             
+</nav> -->
+                   <!--    horizobtal  navbar end here -->
+ 
+                      
+                        <!-- side canvas start here  -->
+<div class="offcanvas offcanvas-start text-bg-dark offcanvas" id="demo">
+  <div class="offcanvas-header">
+   <img src="studentlogo.jpg" alt="Logo" style="width:40px;" class="rounded-pill"> 
+    <h3 class="offcanvas-title"></h3>
+   <div class="bg-primary badge rounded-pill container-fluid text-center">
+    <a class="nav-link text-white fw-bold fs-4" href="https://www.w3schools.com/java/default.asp">Sign In        
+    </a>
+    </div> 
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h4>Hello,Welcome to my web application</h4>
+    <p>Created by using;-</p>
+    <p>..........................................</p>   
+    <p>1.SPRING-BOOT</p>
+     <p>2.DATA-JPA</p>
+     <p>3.SPRING MVC</p>
+     <p>4.THYMLEAF HTML</p>
+     <p></p>
+    
+         <p>--------------------->(creator : suman ku. chand)</p>
+         <p>--------------------->contact no:+917682855932</p>   
+    <button class="btn btn-warning" data-bs-dismiss="offcanvas" type="button">Return</button>
+  </div>
+</div>
+                    <!-- side canvas end here  -->
+ 
+                      
+                    <!-- Carousel slide style here --> 
+  <style>
+    /* Custom CSS for smooth sliding effect */
+    .carousel-item {
+        transition: transform 1.5s ease;
+    }
+    .carousel-inner {
+        overflow: hidden;
+    }
+ /* Animation for moving text inside the upper navbar */
+  .offcanvas {
+        transition: transform 0.5s ease;
+    }
+ 
+@keyframes moveText {
+    0% { transform: translateX(100%) translateY(0); }
+    50% { transform: translateX(0) translateY(10px); }
+    100% { transform: translateX(-110%) translateY(0); }
+}
+
+.navbar-text.animated-text {
+    white-space: nowrap;
+     overflow: hidden;
+    position: absolute;
+    animation: moveText 50s linear infinite;
+    animation-delay: 0s; /* Start the animation immediately */
+}
+ body {
+            background-image: url('space.png'); /* Replace 'space.png' with your image path */
+            background-size: cover;
+            background-repeat: n0-repeat;
+            background-attachment: fixed;
+        }
+          @media (max-width: 767px) {
+            /* Mobile devices */
+            .vertical-links {
+                display: block;
+            }
+            .vertical-links img {
+                max-height: 100px; /* Adjust the maximum height as needed */
+            }
+        }
+        
+      
     .contact-box {
         border: 3px solid green; 
         border-radius: 10px; 
@@ -116,88 +266,247 @@
     font-size: 20px;
     font-weight: bold;
 }
-
+        
 </style>
+                    <!-- Carousel slide style end here -->
+
+           
+ <body> 
+                                     <!-- Carousel start here -->
+<!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> <!-- Set the interval time in milliseconds -->
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="student1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="student2.jpeg" alt="Chicago" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="student3.jpeg" alt="New York" class="d-block" style="width:100%">
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+<!--   <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>  -->
+</div>                       <!-- Carouselstart end here -->
 
 
-
-<body>
-
-   <div class="plus-icon-container"> 
+               <!--  other navabar bix image bottom start here -->
+<nav class="navbar navbar-expand-sm bg-success navbar-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">#students  #student #school</a>
+  </div>
+</nav>
+         <!--  other navabar bix image bottom end here -->
+                                
+            <!--       <h1 class="text-secondary">Students List:</h1>
+         <div  class="mt-9 p-5 bg-light text-primary rounded">
+           <strong>(Created by: Suman Ku. Chand)</strong> 
+         </div> -->
+         
+                    <!-- card start here  -->
+  <div class="card bg-info text-white" style="border-radius: 0;">               
+   </div>
+  
+                       <!-- card end here  -->
+   <div class="container">
+    <div class="row">
+        <!-- Main Table -->
+        <div class="col-md-8">
+        <h6 class="bg-dark col-md-3">CONTACT MANAGEMENT:</h6> 
+          <div class="d-grid gap-3">
         <button type="button" class="btn favorite-btn textbtn text-primary" data-bs-toggle="modal" data-bs-target="#myModal" onclick="clearForm()">
       <i class="fas fa-plus-circle text-primary "></i>ADD NEW
        </button> </div>
+            <div class="table-responsive-sm">
+                <table class="table table-bordered" style="margin-bottom: 0;">
+                    <thead class="table-dark">
+                        <tr th:each="contact : ${contacts}">
+                            <td>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <button type="submit" th:onclick="'get_details(' + ${contact.id} + ')'" class="btn mybtn" data-bs-toggle="modal" data-bs-target="#myModalEdit">
+                                            <i class="fas fa-edit edit"></i>
+                                        </button>
+                                        <span th:text="${contact.username}"></span>
+                                    </div>
+                                    <div>
+                                        <button th:if="${contact.isFavorite==true}" type="button" class="btn mybtn" th:onclick="'manage_fav(' + ${contact.id} + ')'" style="display: block;">
+                                            <i class="fas fa-heart red-heart"></i>
+                                        </button>
+                                        <button th:unless="${contact.isFavorite}" type="button" class="btn mybtn" th:onclick="'manage_fav(' + ${contact.id} + ')'" style="display: block;">
+                                            <i class="fas fa-heart white-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" th:onclick="'showConfirmationModal(' + ${contact.id} + ')'" class="btn mybtn" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                                        <i class="fas fa-remove myremove fa-lg"></i>
+                                    </button>
+                                    <span th:text="${contact.email}"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Favorite Table -->
+        <div class="col-md-4">
+        <br></br>
+            <h6 class="bg-dark col-md-3">FAVORITE LIST:-</h6>
+            <div class="table-responsive-sm">
+                <table class="table table-bordered" style="margin-bottom: 0;">
+                    <tbody id="FavoriteTable">
+                        <!-- Content for Favorite Table -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
-                       
-    <table class="table table-borderless contact-box">
-    <tbody>
-        <tr th:each="contact : ${contacts}">
-            <td>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <button type="submit" th:onclick="'get_details(' + ${contact.id} + ')'" class="btn mybtn" data-bs-toggle="modal" data-bs-target="#myModalEdit">
-                            <i class="fas fa-edit edit"></i>
-                        </button>
-                        <span th:text="${contact.username}"></span>
-                    </div>
-                    <div>
-                        <button th:if="${contact.isFavorite==true}" type="button"class="btn mybtn" th:onclick="'manage_fav(' + ${contact.id} + ')'" style="display: block;">
-                            <i class="fas fa-heart red-heart"></i>
-                        </button>
-                        <button th:unless="${contact.isFavorite}" type="button" class="btn mybtn" th:onclick="'manage_fav(' + ${contact.id} + ')'" style="display: block;">
-                            <i class="fas fa-heart white-heart"></i>
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <button type="submit" th:onclick="'showConfirmationModal(' + ${contact.id} + ')'" class="btn mybtn" data-bs-toggle="modal" data-bs-target="#confirmationModal">
-                        <i class="fas fa-remove myremove fa-lg"></i>
-                    </button>
-                    <span th:text="${contact.email}"></span>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<!-- Modal and other content here -->
 
-    
-     <div> 
-  <table class="table table-borderless contact-box1">
-    <tbody id="FavoriteTable">
-    </tbody>
-</table>
+
+   
+                                   <!-- table division end here  -->
+                                   
+     
+                    <!--      for space between last card and table  --> 
+                       <div  class="mt-9 p-5 "></div>
+   
+  <!-- last card and navlinks start here -->
+   <div class="card img-fluid bg-dark mt-3" style="border-radius: 0;">
+    <div class="card-img-overlay d-flex justify-content-between">
+                <div class="vertical-links">
+            <h2 class="text-light">Learn core:</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/c/index.php">C programming</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/cs/index.php">C# Programming</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/cs/index.php">C#.net programming</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/java/default.asp">Java programming</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/php/default.asp">PHP programming</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/cs/index.php">C#.net programming</a>
+                </li>
+            </ul>
+        
+
+            <h2 class="text-light">Learn Advance:</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/java/default.asp">Advanced JAVA</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/cs/index.php">.NET Advance</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/python/default.asp">Python Advance</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/java/default.asp">Servelet and Jsp</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/cpp/default.asp">C++ Framework</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/asp/default.asp">ASP</a>
+                </li>
+            </ul>
+        </div>
+                <div class="vertical-links">
+            <h2 class="text-light">Frontend:</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/html/default.asp">Learn HTML programing</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/css/default.asp">Learn CSS style making</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">BOOTSTRAP frontend style</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/js/default.asp">use jAVA Script</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/react/default.asp"> use React Java script</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/nodejs/default.asp">use Node JavaScript</a>
+                </li>
+            </ul>
+
+                <div class="vertical-links">
+            <h2 class="text-light">Data base:</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/mysql/default.asp">learn OraclexDataBase</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/mysql/default.asp"> learn SQL DataBase</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/mysql/default.asp">learn MYsql DataBase</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/mysql/default.asp">learn JDBC connection</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/mysql/default.asp">learn DataJPA connection</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-warning fw-bold fs-6" href="https://www.w3schools.com/git/default.asp">learn GitHub push</a>
+                </li>
+            </ul>
+        </div>
+       
+<!-- New div for the logo -->
+       <div class="d-flex justify-content-center align-items-center">
+          <h5 class="text-info">sponsored:</h5>
+              <a class="nav-link text-primary fw-bold fs-6" href="https://www.flipkart.com/">
+             <img src="flipkart.jpg" alt="Logo" style="width:60px;" class="">
+             </a>
+        </div>
+    </div>
+</div>
 </div>
 
 
-    <!--  <div id="createContactDialog" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content" id="createContactDialogContent">
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="modal" id="myModal4">
-    <div class="modal-dialog modal-lg ">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="text-dark">New Contact</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body" id="modalbody">
-                
-           </div>
-            <div class="modal-footer">
-          </div>
-        </div>
-    </div>
-</div> -->
+                          <!-- last card and navlinks end here -->
 
-     <div class="modal" id="myModal">
+            <div class="modal" id="myModal">
     <div class="modal-dialog modal-lg ">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="text-dark">New Contact</h2>
+                <h2 class="text-light">New Contact</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
 
@@ -261,7 +570,7 @@
     <div class="modal-dialog modal-lg ">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="text-dark">Edit Contact</h2>
+                <h2 class="text-light">Edit Contact</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
 
@@ -360,14 +669,73 @@
         $('#submitButton').text('Submit');
     }
 
-    function submitForm() {
+    function validateForm() {
+        // Get form values
+        const firstName = $('#FirstName').val();
+        const lastName = $('#LastName').val();
+        const email = $('#Email').val();
         const password = $('#Password').val();
         const confirmPassword = $('#ConfirmPassword').val();
+        const phone = $('#PhoneNo').val();
+        const userName = $('#UserName').val();
+        const address = $('#Address').val();
 
+        // Validation flags
+        let isValid = true;
+        let errorMessage = '';
+
+        // Validate First Name (3-8 characters)
+        if (firstName.length < 3 || firstName.length > 20) {
+            isValid = false;
+            errorMessage += 'First Name must be between 3 to 20 characters long.\n';
+        }
+
+        // Validate Last Name (3-8 characters)
+        if (lastName.length < 3 || lastName.length > 10) {
+            isValid = false;
+            errorMessage += 'Last Name must be between 3 to 10 characters long.\n';
+        }
+
+        // Validate Email (basic email pattern check)
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            isValid = false;
+            errorMessage += 'Please enter a valid email address.\n';
+        }
+
+        // Validate Password (at least 6 characters)
+        if (password.length < 6) {
+            isValid = false;
+            errorMessage += 'Password must be at least 6 characters long.\n';
+        }
+
+        // Confirm Password
         if (password !== confirmPassword) {
-            alert("Password and Confirm Password do not match");
+            isValid = false;
+            errorMessage += 'Password and confrompassward must be match.\n';
+        }
+
+        // Validate Phone Number (basic check for numeric input)
+        if (!/^\d+$/.test(phone)) {
+            isValid = false;
+            errorMessage += 'Phone number must be numeric.\n';
+        }
+
+        // Display error message if validation fails
+        if (!isValid) {
+            alert(errorMessage);
+        }
+
+        return isValid;
+    }
+
+    function submitForm() {
+        if (!validateForm()) {
             return;
         }
+
+        const password = $('#Password').val();
+        const confirmPassword = $('#ConfirmPassword').val();
 
         const contactForm = {
             firstname: $('#FirstName').val(),
@@ -385,7 +753,6 @@
         } else {
             addContact(contactForm);
         }
-        
     }
     function submitForm1() {
      const contactForm = {
