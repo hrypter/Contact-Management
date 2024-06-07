@@ -12,7 +12,7 @@ public class Contact {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;	   
 	
-	@Size(min=3,max=20,message="FirstName should between 3 to 10 characters!!!")
+	@Size(min=3,max=20,message="FirstName should between 3 to 20 characters!!!")
 	 @NotEmpty(message="????")  
 	private String firstname;	   
 	 @Size(min=3,max=10,message="LastName should between 3 to 10 characters!!!")
